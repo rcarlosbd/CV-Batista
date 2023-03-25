@@ -42,6 +42,12 @@ html {
   box-sizing: inherit;
 }
 
+html,
+body{
+  max-width: 100% !important;overflow-x: hidden !important;
+}
+
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -612,8 +618,7 @@ progress::-webkit-progress-value {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-}
+ }
 
 .logo a {
   color: var(--text-header-color);
