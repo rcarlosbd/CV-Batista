@@ -159,6 +159,11 @@ p {
   margin: 0 0.25rem;
 }
 
+blockquote {
+  max-width: 100%;
+  word-break: break-word;
+}
+
 /* ~ significa que mueve al selector hermano, que tiene que estar ubicado después del primer selector  */
 
 /* Cuando el slide-1 este checked de a cuerdo al translateX(0%) se posiciona en su origen, el moviemnto será cada 25% y sale de dividir 100% /4 = 25%; si fuesen 5 slide sería 100%/5 = 20% (en - negativo porque el movimiento lo quiero de derecha a izquierda)  */
