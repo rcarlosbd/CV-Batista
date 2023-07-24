@@ -62,3 +62,61 @@
       });
   });
 })(document);
+
+//CODIGO JS DE W3SCHOOLS PARA EL CAROUSEL
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+// CÓDIGO PARA EL CONTADOR DEL TEXTAREA
+window.addEventListener("DOMContentLoaded", function () {
+  const textarea = document.getElementById("comments");
+  const contadorCaracteres = document.querySelector(".contador-caracteres");
+  const limiteCaracteres = 160;
+
+  // Mostrar el mensaje inicial del contador
+  contadorCaracteres.textContent = `${limiteCaracteres} caracteres restantes`;
+
+  textarea.addEventListener("input", function () {
+    const texto = textarea.value;
+    const caracteres = texto.length;
+    const caracteresRestantes = limiteCaracteres - caracteres;
+
+    // Actualizar el contador de caracteres restantes
+    contadorCaracteres.textContent = `${caracteresRestantes} caracteres restantes`;
+  });
+
+  // Reiniciar el contador a 160 caracteres después de enviar el formulario
+  document
+    .querySelector(".contact-form")
+    .addEventListener("submit", function () {
+      contadorCaracteres.textContent = `${limiteCaracteres} caracteres restantes`;
+    });
+});
