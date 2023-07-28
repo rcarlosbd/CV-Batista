@@ -1,4 +1,4 @@
-# CV Design & Web Developer
+# CV Web Developer Design
 
 ## Proyecto
 [Acceso al sitio](https://rcarlosbd.github.io/desing-web-developer/)
