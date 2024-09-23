@@ -3,4 +3,4 @@
 ## Proyecto
 ###
 
-https://rcarlosbd.github.io/cv-batista/
+https://rcarlosbd.github.io/CV-Batista/
